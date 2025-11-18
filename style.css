@@ -1,0 +1,244 @@
+ 
+/*Configura o cabeçalho*/
+:root {
+    --bg:#a4bfce65;            /*Muda a cor de fundo da página*/
+}     
+header{
+    
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;    /*centraliza horizontalmente*/
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 2px 6px;
+    color: white;               /*muda a cor da fonte do cabeçalho*/
+}
+
+
+
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+    .menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    /*configura caixinhas*/
+    padding: 8px 15px;
+    background-color: #0ac0fdff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+
+
+body{
+
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color:black;
+    line-height: 1.5;
+ }
+ .container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 1rem 0;
+
+ }
+
+.site-header {
+
+    background: linear-gradient(90deg, #028b8b,#eef4ff);
+    border-bottom: 1px solid #e0e6f1;
+    padding: 1rem 0;
+}
+
+
+
+
+p { color: black; 
+    text-align: center;
+    text-transform:capitalize;
+}
+
+
+nav ul{
+    list-style: none;
+    display: flex;      /*faz itens ficar lado a lado*/
+    gap: 30px;          /*espaço entre links*/
+}
+
+    /*Fim do cabeçalho*/
+
+
+
+main {
+    font-family: 'poppins', sans-serif;
+    color: #028b8b;
+}
+
+.hero {
+    
+    background: url("" center/cover no-repeat);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+ .hero-content{
+    
+    background-color: rgb(71, 245, 178);
+    display:flexbox;
+    justify-content: center;   
+    border-radius: 15px;
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 300px;
+
+ }
+
+ .hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+
+ }
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+
+}
+
+.btn {
+    background-color: rgba(20, 4, 250, 0.459);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: rgba(7, 7, 7, 0.596);
+
+}
+
+/* ---------- SERVIÇOS ---------- */
+
+.serviços {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Ajusta a responsividade para diferentes telas */
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #028b8b;
+}
+
+    
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+
+
+}
+
+.card {
+  background: white;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  color: #00a6a6;
+  margin-top: 15px;
+}
+
+/* Depoimentos */
+.depoimentos {
+  background-color: #eaf9f8;
+  text-align: center;
+  padding: 20px 20px;
+  
+}
+
+.depoimentos blockquote {
+    
+  font-style: italic;
+  font-size: 1.1em;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #555;
+}
+
+.depoimentos cite {
+  display: block;
+  margin-top: 10px;
+  color: #007f7f;
+  font-weight: bold;
+}
+
+
+/*  Inicio do "article" */
+
+.servico {
+    display: flex;      /* ativa o Flexbox, sistema moderno no CSS. Transforma o .servico em um container flexível.
+Os elementos internos (imagem + texto) ficam lado a lado. */
+    align-items: center;  /*  Alinha os itens verticalmente no centro dentro da caixa. */
+    gap: 20px;
+    background: #ffffff;
+    border-radius: 12px;      /*  Arredonda os cantos da caixa com 12px. */
+    padding: 20px;  /*  Cria espaçamento interno de 20px entre o conteúdo e as bordas da caixa. */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 900px;  /*  Limita a largura máxima da caixa em 900px, para não ficar gigante em telas grandes  */
+    margin: 40px auto;  /* 40px em cima e embaixo. auto nas laterais → isso centraliza a caixa horizontalmente */
+}
+
+.servico img {
+    width: 280px;
+    border-radius: 12px;
+}
+
+.servico .conteudo h2 {
+    color: #0066cc;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.servico .conteudo p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.botao {
+    background: #0099ff;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: #007acc;  /* Muda a cor do botão quando o usuário passa o mouse → cria um efeito profissional e interativo.*/
+}
