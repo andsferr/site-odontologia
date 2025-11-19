@@ -1,10 +1,17 @@
  
 /*Configura o cabeçalho*/
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 :root {
     --bg:#a4bfce65;            /*Muda a cor de fundo da página*/
 }     
 header{
-    
+    display: flex;
    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-content: center;    /*centraliza horizontalmente*/
     align-items: center;
@@ -82,7 +89,8 @@ main {
 }
 
 .hero {
-    
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   
     background: url("" center/cover no-repeat);
     color: white;
     text-align: center;
@@ -91,7 +99,7 @@ main {
  .hero-content{
     
     background-color: rgb(71, 245, 178);
-    display:flexbox;
+    
     justify-content: center;   
     border-radius: 15px;
     width: 100%;
@@ -241,4 +249,159 @@ Os elementos internos (imagem + texto) ficam lado a lado. */
 
 .botao:hover {
     background: #007acc;  /* Muda a cor do botão quando o usuário passa o mouse → cria um efeito profissional e interativo.*/
+}
+
+/* aside*/
+
+/* Estilo geral do aside */
+.odontologia-aside {
+  max-width: 300px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px auto;
+}
+
+/* Caixas dentro do aside */
+.aside-box {
+  background: #f4f8fb;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Títulos */
+.aside-box h2,
+.aside-box h3 {
+  color: #0066cc;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Listas */
+.aside-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.aside-box ul li {
+  margin-bottom: 6px;
+  padding-left: 10px;
+  border-left: 3px solid #0066cc;
+}
+
+/* Botão */
+.btn-agendar {
+  display: inline-block;
+  background: #0099ff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-agendar:hover {
+  background: #0077cc;
+}
+
+/* Deixar aside responsivo */
+@media (max-width: 768px) {
+  .odontologia-aside {
+    max-width: 100%;
+  }
+}
+
+.conteudo-principal {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 30px;
+  padding: 20px;
+}
+
+.coluna-conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Responsividade do layout */
+@media (max-width: 768px) {
+  .conteudo-principal {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==========================
+FOOTER PROFISSIONAL
+============================*/
+
+.rodape {
+background: #015e63;
+color: white;
+padding: 50px 20px 20px;
+margin-top: 40px;
+font-family: "Poppins", sans-serif;
+}
+
+.rodape-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 30px;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* Colunas */
+.coluna h2,
+.coluna h3 {
+margin-bottom: 10px;
+font-weight: 600;
+}
+
+.coluna p {
+line-height: 1.5;
+}
+
+/* Lista de links */
+.coluna ul {
+list-style: none;
+padding: 0;
+}
+
+.coluna ul li {
+margin-bottom: 8px;
+}
+
+.coluna ul li a {
+color: white;
+text-decoration: none;
+transition: 0.3s;
+}
+
+.coluna ul li a:hover {
+text-decoration: underline;
+}
+
+/* Copy */
+.rodape-copy {
+text-align: center;
+margin-top: 30px;
+border-top: 1px solid rgba(255,255,255,0.3);
+padding-top: 15px;
+font-size: 0.9em;
+}
+
+.rodape-copy a {
+color: white;
+text-decoration: none;
+}
+
+.rodape-copy a:hover {
+text-decoration: underline;
 }
